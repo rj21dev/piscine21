@@ -1,9 +1,11 @@
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_numbers(void);
+void	ft_div_mod(int a, int b, int *div, int *mod);
 
 int	main(void)
 {
-	ft_print_numbers();
-	write(1, "\n", 1);
+	int	div, mod;
+
+	ft_div_mod(15, 5, &div, &mod);
+	printf("div = %d, mod = %d\n", div, mod);
 }

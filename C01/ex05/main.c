@@ -1,6 +1,6 @@
-void ft_print_comb(void);
+void	ft_putstr(char *str);
 
 int	main(void)
 {
-	ft_print_comb();
+	ft_putstr("abcdEFGH\n");
 }

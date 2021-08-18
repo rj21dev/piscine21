@@ -1,9 +1,13 @@
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_reverse_alphabet(void);
+void	ft_swap(int *a, int *b);
 
 int	main(void)
 {
-	ft_print_reverse_alphabet();
-	write(1, "\n", 1);
+	int a = 11;
+	int b = 22;
+
+	printf("Init : a = %d, b = %d\n", a, b);
+	ft_swap(&a, &b);
+	printf("After swap : a = %d, b = %d\n", a, b);
 }

@@ -1,11 +1,13 @@
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_is_negative(int n);
+void	ft_ultimate_div_mod(int *a, int *b);
 
 int	main(void)
 {
-	ft_is_negative(0);
-	write(1, "\n", 1);
-	ft_is_negative(-1);
-	write(1, "\n", 1);
+	int	a = 17;
+	int	b = 5;
+
+	printf("a = %d, b = %d\n", a, b);
+	ft_ultimate_div_mod(&a, &b);
+	printf("div = %d, mod = %d\n", a, b);
 }

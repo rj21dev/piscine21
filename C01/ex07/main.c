@@ -1,13 +1,16 @@
-#include <unistd.h>
+#include <stdio.h>
 
-void	putnbr(int nbr);
+void	ft_rev_int_tab(int *tab, int size);
 
 int	main(void)
 {
-	putnbr(2147483647);
-	write(1, "\n", 1);
-	putnbr(-2147483648);
-	write(1, "\n", 1);
-	putnbr(42);
-	write(1, "\n", 1);
+	int	tab[5] = {1, 2, 3, 4, 5};
+
+	for (int i = 0; i < 5; ++i)
+		printf("%d ", tab[i]);
+	printf("\n");
+	ft_rev_int_tab(tab , 5);
+	for (int i = 0; i < 5; ++i)
+		printf("%d ", tab[i]);
+	printf("\n");
 }

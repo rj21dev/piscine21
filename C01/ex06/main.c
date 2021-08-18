@@ -1,6 +1,9 @@
-void	ft_print_comb2(void);
+#include <stdio.h>
+
+int	ft_strlen(char *str);
 
 int	main(void)
 {
-	ft_print_comb2();
+	char str[] = "abcdqwerty";
+	printf("str = \"%s\", length = %d\n", str, ft_strlen(str));
 }
