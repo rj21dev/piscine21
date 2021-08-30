@@ -1,27 +1,27 @@
 #include <unistd.h>
 
-void	putnbr(int nbr)
+void	ft_putnbr(int nb)
 {
 	char c;
 
-	if (nbr == -2147483648)
+	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
 		return ;
 	}
-	if (nbr < 0)
+	if (nb < 0)
 	{
 		write(1, "-", 1);
-		nbr *= -1;
+		nb *= -1;
 	}
-	if (nbr <= 9)
+	if (nb <= 9)
 	{
-		c = nbr + '0';
+		c = nb + '0';
 		write(1, &c, 1);
 	}
 	else
 	{
-		putnbr(nbr / 10);
-		putnbr(nbr % 10);	
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);	
 	}
 }
